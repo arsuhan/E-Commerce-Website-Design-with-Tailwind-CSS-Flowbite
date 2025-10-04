@@ -10,6 +10,9 @@
         <div class="container mx-auto">
             <Filtter />
         </div>
+        <div class="container mx-auto">
+            <Gallery />
+        </div>
     </Layout>
 
 </template>
@@ -19,4 +22,5 @@ import Layout from '../Layout/Layout.vue';
 import Breadcrumb from '../Women/Breadcrumb.vue';
 import Title from '../Women/Title.vue';
 import Filtter from '../Women/Filtter.vue';
+import Gallery from '../Women/Gallery.vue';
 </script>
