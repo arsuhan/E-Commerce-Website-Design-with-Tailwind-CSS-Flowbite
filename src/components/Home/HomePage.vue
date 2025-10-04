@@ -19,8 +19,8 @@
 
 <script setup>
 import Layout from '../Layout/Layout.vue';
-import Breadcrumb from '../Women/Breadcrumb.vue';
-import Title from '../Women/Title.vue';
-import Filtter from '../Women/Filtter.vue';
-import Gallery from '../Women/Gallery.vue';
+import Breadcrumb from '../Products/Breadcrumb.vue';
+import Title from '../Products/Title.vue';
+import Filtter from '../Products/Filtter.vue';
+import Gallery from '../Products/Gallery.vue';
 </script>
