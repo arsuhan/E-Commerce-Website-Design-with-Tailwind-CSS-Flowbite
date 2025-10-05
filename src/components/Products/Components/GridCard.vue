@@ -1,10 +1,27 @@
 <script setup>
+// import { stringify } from 'querystring';
+import { ref } from 'vue';
 
-defineProps(['ProductData'])
+import PreviewModal from './PreviewModal.vue';
+
+const props = defineProps(['ProductData'])
 
 const addProduct = (product) => {
     console.log('addProduct', product);
 }
+
+// const addProduct = () => {
+//     // console.log('addProduct', product);
+//         const sessionProduct = JSON.parse(sessionStorage.getItem('addProduct')) || []
+//         if (sessionProduct.length > 0) {
+//             sessionProduct.push(props.data)
+//             sessionStorage.setItem('addToCart',JSON.stringify([sessionProduct]))
+            
+//         } else {
+//             sessionStorage.setItem('addToCart',JSON.stringify([props.data]))
+
+//         }
+// }
 
 </script>
 
@@ -14,7 +31,9 @@ const addProduct = (product) => {
         <p class="font-bold text-xl pt-2">{{ data.name }}</p>
         <div class="flex pt-2 justify-between">
             <p class="font-semibold">$ {{ data.price }}</p>
-            <button @click="addProduct(product)" type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2 text-center me-2 mb-2">Buy Now</button>
+            <button type="button" class="text-white bg-gradient-to-br cursor-pointer from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2 text-center me-2 mb-2">Buy Now</button>
+            <PreviewModal :data="data" />
         </div>
     </div>
+    
 </template>
